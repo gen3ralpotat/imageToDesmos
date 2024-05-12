@@ -5,3 +5,6 @@ venv
 xiao-picture
 __pycache__
 tests
+output/updateDesmos.js
+output/images/output.*
+output/desmos_equation_array.txt

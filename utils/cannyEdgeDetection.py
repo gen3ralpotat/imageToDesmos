@@ -5,7 +5,7 @@ from PIL import Image
 
 def image_to_canny_edge_bmp(path: str):
     img = cv2.imread(path, 3)
-    edges = cv2.Canny(image=img, threshold1=75, threshold2=500, apertureSize=3, L2gradient=False)
+    edges = cv2.Canny(image=img, threshold1=25, threshold2=250, apertureSize=3, L2gradient=False)
 
     edgeImage = Image.fromarray(edges)
     edgeImage.save('./output/images/output.bmp')

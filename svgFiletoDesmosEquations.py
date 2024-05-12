@@ -35,8 +35,9 @@ if __name__ == '__main__':
             svg_string = svg_file.read()
             #svg_lines = svg_file.read().splitlines()
             d = ">"
+            svg_string_split = svg_string.split(d)
             for line in svg_string:
-                svg_lines =  [e+d for e in svg_string.split(d) if e]
+                svg_lines = [e+d for e in svg_string_split if e]
             #for line in svgFile:
             #    line = line.rstrip()
             #    line += ' '
