@@ -1,6 +1,6 @@
 .vscode
 .pycache
-test
+tests
 venv
 xiao-picture
 __pycache__
