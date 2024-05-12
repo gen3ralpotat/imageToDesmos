@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if ! [ $# -eq 1 ]; then
+    echo "Usage: ./convert_to_desmos <path-to-image>"
+fi
+
+python3 ./svgFiletoDesmosEquations.py cannyEdge $1
+
+potrace -s ./output/images/output.bmp -o ./output/images/output.svg
+
+python3 ./svgFiletoDesmosEquations.py toDesmos ./output/images/output.svg
+
+echo "JS file saved to ./output/updateDesmos.js"
